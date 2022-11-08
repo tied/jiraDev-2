@@ -30,11 +30,11 @@ else{
     def issuekey = issue.getKey()
     log.warn("Command id : " + issuekey)
 
-    def url_command = "https://command-dev.francetv.fr:8443/browse/" + issuekey
+    def url_command = "https://com-dev.fr:8443/browse/" + issuekey
     log.warn(url_command)
 
     //création de l'appel API
-    def post = new URL("https://devix-dev.francetv.fr/webapi/devis/commandDevix").openConnection();
+    def post = new URL("https://dev-dev.fr/webapi/dev/commandDev").openConnection();
     def message = '{"devis_id":"'+id_devix+'" ,"command_id" :"'+ issuekey +'","command_action_id" :"'+ command_action_id +'","url_command" :"'+ url_command +'"}'
     log.warn(message)
     post.setRequestMethod("POST")
